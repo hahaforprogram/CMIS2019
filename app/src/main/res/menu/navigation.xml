@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_deptdynamics"
+        android:icon="@drawable/ic_apptask"
+        android:title="@string/title_deptdynamics" />
+
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:iconTintMode="screen"
+        android:title="主页" />
+
+    <item
+        android:id="@+id/navigation_inject"
+        android:icon="@drawable/ic_inject"
+        android:title="@string/title_inject" />
+
+    <item
+        android:id="@+id/navigation_setup"
+        android:icon="@drawable/ic_sync"
+        android:title="@string/title_setup" />
+
+</menu>

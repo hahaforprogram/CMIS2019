@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="left"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:baselineAligned="false">
+
+        <com.haha.cmis.widget.SlantedTextView
+            android:id="@+id/stv_bed"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:gravity="center"
+            app:slantedLength="40dp"
+            app:slantedMode="left"
+            app:slantedTextSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_patbedno"
+            android:layout_width="55dp"
+            android:layout_height="match_parent"
+            android:fontFamily="serif"
+            android:gravity="center"
+            android:text="001"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+
+        <ImageView
+            android:id="@+id/tv_patimg"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerInParent="true"
+            android:layout_toRightOf="@+id/tv_patbedno" />
+
+        <TextView
+            android:id="@+id/tv_patname"
+            android:layout_width="55dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/tv_patimg"
+            android:gravity="left|center"
+            android:text=""
+            android:textColor="@color/text_color_big"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_patsex"
+            android:layout_width="40dp"
+            android:layout_height="20dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toEndOf="@+id/tv_patname"
+            android:layout_toRightOf="@+id/tv_patname"
+            android:gravity="center"
+            android:text="男"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/tv_patinpno"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toEndOf="@+id/tv_patsex"
+            android:layout_toRightOf="@+id/tv_patname"
+            android:gravity="left|center"
+            android:text=""
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_chargetype"
+            android:layout_width="40dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/tv_patinpno"
+            android:gravity="left|center"
+            android:text="新医保"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/tv_patindays"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@+id/tv_chargetype"
+            android:gravity="left|center"
+            android:text=""
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/tv_patage"
+            android:layout_width="40dp"
+            android:layout_height="20dp"
+            android:layout_below="@+id/tv_patsex"
+            android:layout_alignStart="@+id/tv_patsex"
+            android:layout_alignLeft="@+id/tv_patsex"
+            android:layout_toStartOf="@+id/tv_patinpno"
+            android:layout_toLeftOf="@+id/tv_patinpno"
+            android:gravity="center"
+            android:text="20岁"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/tv_patdiagnosis"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_below="@+id/tv_patsex"
+            android:layout_alignStart="@+id/tv_patinpno"
+            android:layout_alignLeft="@+id/tv_patinpno"
+            android:layout_toStartOf="@+id/tv_patindays"
+            android:layout_toLeftOf="@+id/tv_patindays"
+            android:gravity="left|center"
+            android:maxLines="1"
+            android:text=""
+            android:textSize="12sp" />
+
+
+        <TextView
+            android:id="@+id/tv_patalerydrugs"
+            android:layout_width="120dp"
+            android:layout_height="20dp"
+            android:layout_below="@+id/tv_patage"
+            android:layout_alignStart="@+id/tv_patage"
+            android:layout_alignLeft="@+id/tv_patage"
+            android:ellipsize="marquee"
+            android:gravity="left|center"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:maxLines="2"
+            android:textColor="@color/red"
+            android:textSize="9sp" />
+
+        <TextView
+            android:id="@+id/tv_patotherinfo"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_below="@+id/tv_patage"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@+id/tv_patalerydrugs"
+            android:background="@drawable/bg_release_item_redmaker"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+
+    </RelativeLayout>
+</LinearLayout>

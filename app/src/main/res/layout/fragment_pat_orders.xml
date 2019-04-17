@@ -1,0 +1,54 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.haha.cmis.ui.module.order.PatOrdersFragment"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_orderlist"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"></android.support.v7.widget.RecyclerView>
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tl_orderFilter"
+            tabIndicatorColor="@color/red"
+            app:tabIndicatorHeight="3dp"
+            android:layout_width="match_parent"
+            android:background="@color/main_theme_color"
+            android:fitsSystemWindows="true"
+            android:layout_gravity="center"
+            app:tabTextColor="@color/white"
+            app:tabSelectedTextColor="@color/red_marker"
+            app:tabGravity="fill"
+            android:animateLayoutChanges="true"
+            android:layout_height="45dp">
+
+            <android.support.design.widget.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="全部" />
+
+            <android.support.design.widget.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="已执行" />
+
+            <android.support.design.widget.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="未执行" />
+        </android.support.design.widget.TabLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

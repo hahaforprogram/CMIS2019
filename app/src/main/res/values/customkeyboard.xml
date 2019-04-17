@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--基础键盘-->
+    //清空
+    <integer name="keycode_empty_text">-2000</integer>
+    //确定隐藏
+    <integer name="keycode_hide_keyboard">-9000</integer>
+
+    <item type="id" name="keyboard_view_move_height" />
+    <item type="id" name="edittext_bind_keyboard" />
+</resources>

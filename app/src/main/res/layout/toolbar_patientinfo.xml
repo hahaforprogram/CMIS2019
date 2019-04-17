@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="#F0F0F0"
+    android:orientation="vertical"
+    android:layout_gravity="center">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:minHeight="?attr/actionBarSize"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp">
+
+        <RelativeLayout
+            android:id="@+id/rl_actionbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_gravity="center"
+            android:background="@color/white"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/tv_patimg"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:fitsSystemWindows="true"
+                android:backgroundTintMode="src_over"
+                android:scaleType="fitXY" />
+
+            <LinearLayout
+                android:id="@+id/ll_patinfo"
+                android:layout_width="110dp"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/tv_patimg"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_patname"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/tv_patimg"
+                    android:gravity="center"
+                    android:layout_weight="5"
+                    android:text="刘德华"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:textSize="22sp"></TextView>
+
+                <TextView
+                    android:id="@+id/tv_patinpno"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="top"
+                    android:layout_weight="6"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:text="住院号:1102012"
+                    android:textColor="@color/white"
+                    android:padding="0dp"
+                    android:textSize="14sp"></TextView>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_patsex"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:layout_toRightOf="@+id/ll_patinfo" />
+
+            <android.support.v4.widget.Space
+                android:id="@+id/space_null"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_toEndOf="@+id/iv_patsex"
+                android:layout_toRightOf="@+id/iv_patsex" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/space_null"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_patbedno"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/iv_patsex"
+                    android:gravity="left|center"
+                    android:layout_weight="5"
+                    android:text="刘德华"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:textSize="22sp"></TextView>
+
+                <TextView
+                    android:id="@+id/tv_patdiagnosis"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="top"
+                    android:layout_weight="6"
+                    android:gravity="left|center"
+                    android:paddingBottom="10dp"
+                    android:text="床:1102012"
+                    android:textColor="@color/white"
+                    android:padding="0dp"
+                    android:textSize="14sp"></TextView>
+            </LinearLayout>
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+</LinearLayout>

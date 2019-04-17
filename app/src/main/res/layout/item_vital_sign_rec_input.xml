@@ -1,0 +1,554 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/colorAccent"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="6"
+            android:gravity="center_vertical|center"
+            android:text="2018-01-01周五"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@color/colorAccent"
+            android:gravity="center|right"
+            android:paddingLeft="5dp"
+            android:text="14:00"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_timeunits"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|bottom"
+            android:layout_weight="1"
+            android:background="@color/colorAccent"
+            android:gravity="bottom|left"
+            android:text="区间"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/btn_nor_down"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            android:text="保存"></Button>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:paddingTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+
+        <LinearLayout
+            android:id="@+id/ll_tw"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_twtext"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:gravity="right|center"
+                android:lines="1"
+                android:padding="1dp"
+                android:paddingTop="6dp"
+                android:textColor="@color/red_marker"
+                android:text="体温-腋下"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view_tw"
+            android:layout_width="1dip"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_toRightOf="@+id/ll_tw"
+            android:background="#EEEFFF" />
+
+        <EditText
+            android:id="@+id/et_tw"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center"
+            android:layout_marginLeft="2dp"
+            android:layout_toRightOf="@+id/view_tw"
+            android:background="@drawable/edittext_shape"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:ems="1"
+            android:gravity="center"
+            android:hint="请输入体温"
+            android:tag="体温:°C"
+            android:padding="1dp"
+            android:textColor="@android:color/black"
+            android:textColorHint="@color/alpha_grey"
+            android:textSize="18sp">
+
+            <requestFocus />
+        </EditText>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="43dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+
+        <LinearLayout
+            android:id="@+id/ll_xy"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_xytext"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_weight="1"
+                android:gravity="right|center"
+                android:lines="1"
+                android:padding="1dp"
+                android:text="血压"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+
+        <View
+            android:id="@+id/view_xy"
+            android:layout_width="1dip"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_toRightOf="@+id/ll_xy"
+            android:background="#EEEFFF" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/view_xy"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_xyssy"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/edittext_shape"
+                android:ems="19"
+                android:gravity="center"
+                android:hint="请输入收缩压"
+                android:tag="血压Low:mmHg"
+                android:padding="1dp"
+                android:textColor="@android:color/black"
+                android:textColorHint="@color/alpha_grey"
+                android:textSize="18sp">
+
+                <requestFocus />
+            </EditText>
+
+            <EditText
+                android:id="@+id/et_xyszy"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/edittext_shape"
+                android:ems="19"
+                android:gravity="center"
+                android:hint="请输入舒张压"
+                android:tag="血压High:mmHg"
+                android:padding="1dp"
+                android:textColor="@android:color/black"
+                android:textColorHint="@color/alpha_grey"
+                android:textSize="18sp">
+
+                <requestFocus />
+            </EditText>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="43dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+
+        <LinearLayout
+            android:id="@+id/ll_xl"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_xltext"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_weight="1"
+                android:gravity="right|center"
+                android:lines="1"
+                android:padding="1dp"
+                android:text="心率"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view_xl"
+            android:layout_width="1dp"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_toRightOf="@+id/ll_xl"
+            android:background="#EEEFFF" />
+
+        <EditText
+            android:id="@+id/et_xl"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginLeft="2dp"
+            android:layout_toRightOf="@+id/view_xl"
+            android:layout_weight="0.61"
+            android:background="@drawable/edittext_shape"
+            android:ems="19"
+            android:gravity="center"
+            android:hint="请输入心率"
+            android:tag="心率:次"
+            android:padding="1dp"
+            android:textColor="@android:color/black"
+            android:textColorHint="@color/alpha_grey"
+            android:textSize="18sp">
+
+            <requestFocus />
+        </EditText>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="43dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+
+        <LinearLayout
+            android:id="@+id/ll_mb"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_mbtext"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_weight="1"
+                android:gravity="right|center"
+                android:lines="1"
+                android:padding="1dp"
+                android:text="脉搏"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view_mb"
+            android:layout_width="1dip"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_toRightOf="@+id/ll_mb"
+            android:background="#EEEFFF" />
+
+        <EditText
+            android:id="@+id/et_mb"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="2dp"
+            android:layout_toRightOf="@+id/view_mb"
+            android:layout_weight="0.61"
+            android:background="@drawable/edittext_shape"
+            android:ems="19"
+            android:gravity="center"
+            android:hint="请输入脉搏"
+            android:tag="脉搏:次"
+            android:padding="1dp"
+            android:textColor="@android:color/black"
+            android:textColorHint="@color/alpha_grey"
+            android:textSize="18sp"
+            android:layout_alignParentBottom="true">
+
+            <requestFocus />
+        </EditText>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="43dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+
+        <LinearLayout
+            android:id="@+id/ll_hx"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_hxtext"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_weight="1"
+                android:gravity="right|center"
+                android:lines="1"
+                android:padding="1dp"
+                android:text="呼吸"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view_hx"
+            android:layout_width="1dip"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_toRightOf="@+id/ll_hx"
+            android:background="#EEEFFF" />
+
+        <EditText
+            android:id="@+id/et_hx"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginLeft="2dp"
+            android:layout_toRightOf="@+id/view_hx"
+            android:layout_weight="0.61"
+            android:background="@drawable/edittext_shape"
+            android:ems="19"
+            android:gravity="center"
+            android:hint="请输入呼吸"
+            android:tag="呼吸:次"
+            android:padding="1dp"
+            android:textColor="@android:color/black"
+            android:textColorHint="@color/alpha_grey"
+            android:textSize="18sp">
+
+            <requestFocus />
+        </EditText>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="43dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+
+        <LinearLayout
+            android:id="@+id/ll_xt"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_xttext"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_weight="1"
+                android:gravity="right|center"
+                android:lines="1"
+                android:padding="1dp"
+                android:text="血糖"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view_xt"
+            android:layout_width="1dip"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_toRightOf="@+id/ll_xt"
+            android:background="#EEEFFF" />
+
+        <EditText
+            android:id="@+id/et_xt"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginLeft="2dp"
+            android:layout_toRightOf="@+id/view_xt"
+            android:layout_weight="0.61"
+            android:background="@drawable/edittext_shape"
+            android:ems="19"
+            android:gravity="center"
+            android:tag="血糖"
+            android:hint="请输入血糖值"
+            android:padding="1dp"
+            android:textColor="@android:color/black"
+            android:textColorHint="@color/alpha_grey"
+            android:textSize="18sp">
+
+            <requestFocus />
+        </EditText>
+    </RelativeLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/grey_line" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="43dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+
+        <LinearLayout
+            android:id="@+id/ll_zdy"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_zdytext"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_weight="1"
+                android:focusable="true"
+                android:clickable="true"
+                android:gravity="right|center"
+                android:lines="1"
+                android:padding="1dp"
+                android:text="用户自定义"
+                android:textColor="@color/blue_marker"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view_zdy"
+            android:layout_width="1dip"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_toRightOf="@+id/ll_zdy"
+            android:background="#EEEFFF" />
+
+        <EditText
+            android:id="@+id/et_zdy"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginLeft="2dp"
+            android:layout_toRightOf="@+id/view_zdy"
+            android:layout_weight="0.61"
+            android:background="@drawable/edittext_shape"
+            android:ems="19"
+            android:gravity="center"
+            android:hint="请先选择，再输入"
+            android:tag="自定义"
+            android:padding="1dp"
+            android:textColor="@android:color/black"
+            android:textColorHint="@color/alpha_grey"
+            android:textSize="18sp">
+
+            <requestFocus />
+        </EditText>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@color/grey_line" />
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="80dp"-->
+    <!--android:orientation="horizontal"-->
+    <!--android:layout_gravity="center_horizontal">-->
+
+    <!--<Button-->
+    <!--android:id="@+id/btn_save"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_marginLeft="15dp"-->
+    <!--android:layout_marginRight="15dp"-->
+    <!--android:layout_height="40dp"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:layout_weight="1"-->
+    <!--android:background="@drawable/btn_nor_down"-->
+    <!--android:textColor="@color/white"-->
+    <!--android:textSize="18dp"-->
+    <!--android:text="保存" >-->
+    <!--</Button>-->
+
+    <!--</LinearLayout>-->
+
+</LinearLayout>
